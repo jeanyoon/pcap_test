@@ -79,6 +79,7 @@ int main(int argc, char* argv[]) {
         }
     }
     else if(ntohs(ethernet->ether_type) == 2054){
+	    //ARP Protocol
     }
 
   }
