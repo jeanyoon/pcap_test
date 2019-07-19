@@ -46,8 +46,10 @@ int main(int argc, char* argv[]) {
     if (res == 0) continue;
     if (res == -1 || res == -2) break;
 
+    printf("\n\n[+] %d bytes packet captured\n", header->caplen);
+
     ether_header* ethernet = (ether_header*) packet;
-    printf("\n\nS_MAC: ");
+    printf("S_MAC: ");
     print2hex(ethernet->ether_dhost, ETHER_ADDR_LEN);
     printf("\nD_MAC: ");
     print2hex(ethernet->ether_shost, ETHER_ADDR_LEN);
